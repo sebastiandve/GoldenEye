@@ -1,0 +1,324 @@
+2022-11-20 12:24:17,296 : ERROR : BINANCE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 516, in message_handler
+    await self._book(msg, pair, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 317, in _book
+    await self._snapshot(exchange_pair)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 289, in _snapshot
+    await self.book_callback(L2_BOOK, self._l2_book[std_pair], time.time(), timestamp=timestamp, raw=resp, sequence_number=self.last_update_id[std_pair])
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book() missing 3 required positional arguments: 'book', 'timestamp', and 'receipt'
+2022-11-20 12:24:28,755 : ERROR : BINANCE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 516, in message_handler
+    await self._book(msg, pair, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 317, in _book
+    await self._snapshot(exchange_pair)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 289, in _snapshot
+    await self.book_callback(L2_BOOK, self._l2_book[std_pair], time.time(), timestamp=timestamp, raw=resp, sequence_number=self.last_update_id[std_pair])
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book() missing 3 required positional arguments: 'book', 'timestamp', and 'receipt'
+2022-11-20 12:55:23,875 : ERROR : BINANCE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 516, in message_handler
+    await self._book(msg, pair, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 317, in _book
+    await self._snapshot(exchange_pair)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 289, in _snapshot
+    await self.book_callback(L2_BOOK, self._l2_book[std_pair], time.time(), timestamp=timestamp, raw=resp, sequence_number=self.last_update_id[std_pair])
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book() missing 3 required positional arguments: 'book', 'timestamp', and 'receipt'
+2022-11-20 12:55:35,265 : ERROR : BINANCE.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 516, in message_handler
+    await self._book(msg, pair, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 317, in _book
+    await self._snapshot(exchange_pair)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 289, in _snapshot
+    await self.book_callback(L2_BOOK, self._l2_book[std_pair], time.time(), timestamp=timestamp, raw=resp, sequence_number=self.last_update_id[std_pair])
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book() missing 3 required positional arguments: 'book', 'timestamp', and 'receipt'
+2022-11-20 13:24:02,735 : ERROR : BITMEX.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/bitmex.py", line 764, in message_handler
+    await self._book(msg, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/bitmex.py", line 431, in _book
+    await self.book_callback(L2_BOOK, self._l2_book[pair], timestamp, raw=msg, delta=delta)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book() missing 3 required positional arguments: 'book', 'timestamp', and 'receipt'
+2022-11-20 13:24:05,279 : ERROR : BITMEX.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/bitmex.py", line 764, in message_handler
+    await self._book(msg, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/bitmex.py", line 431, in _book
+    await self.book_callback(L2_BOOK, self._l2_book[pair], timestamp, raw=msg, delta=delta)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book() missing 3 required positional arguments: 'book', 'timestamp', and 'receipt'
+2022-11-20 13:25:20,814 : ERROR : BINANCE_FUTURES.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance_futures.py", line 263, in message_handler
+    await self._book(msg, pair, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 317, in _book
+    await self._snapshot(exchange_pair)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 289, in _snapshot
+    await self.book_callback(L2_BOOK, self._l2_book[std_pair], time.time(), timestamp=timestamp, raw=resp, sequence_number=self.last_update_id[std_pair])
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book() missing 3 required positional arguments: 'book', 'timestamp', and 'receipt'
+2022-11-20 13:25:33,809 : ERROR : BINANCE_FUTURES.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance_futures.py", line 263, in message_handler
+    await self._book(msg, pair, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 317, in _book
+    await self._snapshot(exchange_pair)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/binance.py", line 289, in _snapshot
+    await self.book_callback(L2_BOOK, self._l2_book[std_pair], time.time(), timestamp=timestamp, raw=resp, sequence_number=self.last_update_id[std_pair])
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book() missing 3 required positional arguments: 'book', 'timestamp', and 'receipt'
+2022-11-20 14:03:32,747 : ERROR : BITMEX.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/bitmex.py", line 764, in message_handler
+    await self._book(msg, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/bitmex.py", line 431, in _book
+    await self.book_callback(L2_BOOK, self._l2_book[pair], timestamp, raw=msg, delta=delta)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book_to_csv() missing 1 required positional argument: 'kjhkhk'
+2022-11-20 14:03:35,287 : ERROR : BITMEX.ws.1: encountered an exception, reconnecting in 1.0 seconds
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 119, in _handler
+    await handler(message, connection, self.conn.last_message)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/bitmex.py", line 764, in message_handler
+    await self._book(msg, timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/exchanges/bitmex.py", line 431, in _book
+    await self.book_callback(L2_BOOK, self._l2_book[pair], timestamp, raw=msg, delta=delta)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 247, in book_callback
+    await self.callback(book_type, book, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/feed.py", line 258, in callback
+    await cb(obj, receipt_timestamp)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/callback.py", line 20, in __call__
+    await self.callback(obj, receipt_timestamp)
+TypeError: book_to_csv() missing 1 required positional argument: 'kjhkhk'
+2022-11-20 14:27:08,001 : WARNING : BITMEX.ws.1: received no messages within timeout, restarting connection
+2022-11-20 14:33:27,254 : WARNING : BINANCE_FUTURES.ws.1: received no messages within timeout, restarting connection
+2022-11-20 18:34:38,035 : WARNING : BITMEX.ws.4: received no messages within timeout, restarting connection
+2022-11-20 18:34:38,198 : WARNING : BINANCE_FUTURES.ws.5: received no messages within timeout, restarting connection
+2022-11-20 18:34:38,199 : WARNING : BINANCE.ws.3: received no messages within timeout, restarting connection
+2022-11-20 18:34:38,654 : WARNING : BINANCE.ws.3: encountered connection issue sent 1000 (OK); no close frame received - reconnecting in 1.0 seconds...
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 968, in transfer_data
+    message = await self.read_message()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1038, in read_message
+    frame = await self.read_data_frame(max_size=self.max_size)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1113, in read_data_frame
+    frame = await self.read_frame(max_size)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1170, in read_frame
+    frame = await Frame.read(
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/framing.py", line 69, in read
+    data = await reader(2)
+  File "/Users/sebastian/.pyenv/versions/3.8.13/lib/python3.8/asyncio/streams.py", line 723, in readexactly
+    await self._wait_for_data('readexactly')
+  File "/Users/sebastian/.pyenv/versions/3.8.13/lib/python3.8/asyncio/streams.py", line 517, in _wait_for_data
+    await self._waiter
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 115, in _handler
+    async for message in connection.read():
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection.py", line 333, in read
+    async for data in self.conn:
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 497, in __aiter__
+    yield await self.recv()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 568, in recv
+    await self.ensure_open()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 944, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedError: sent 1000 (OK); no close frame received
+2022-11-20 18:50:09,372 : WARNING : BINANCE.ws.3: received no messages within timeout, restarting connection
+2022-11-20 19:10:55,851 : WARNING : BITMEX.ws.4: encountered connection issue sent 1000 (OK); no close frame received - reconnecting in 1.0 seconds...
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 968, in transfer_data
+    message = await self.read_message()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1038, in read_message
+    frame = await self.read_data_frame(max_size=self.max_size)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1113, in read_data_frame
+    frame = await self.read_frame(max_size)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1170, in read_frame
+    frame = await Frame.read(
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/framing.py", line 69, in read
+    data = await reader(2)
+  File "/Users/sebastian/.pyenv/versions/3.8.13/lib/python3.8/asyncio/streams.py", line 723, in readexactly
+    await self._wait_for_data('readexactly')
+  File "/Users/sebastian/.pyenv/versions/3.8.13/lib/python3.8/asyncio/streams.py", line 517, in _wait_for_data
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 115, in _handler
+    async for message in connection.read():
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection.py", line 333, in read
+    async for data in self.conn:
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 497, in __aiter__
+    yield await self.recv()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 568, in recv
+    await self.ensure_open()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 953, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedError: sent 1000 (OK); no close frame received
+2022-11-20 19:10:55,852 : WARNING : BINANCE_FUTURES.ws.5: encountered connection issue sent 1000 (OK); no close frame received - reconnecting in 1.0 seconds...
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 968, in transfer_data
+    message = await self.read_message()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1038, in read_message
+    frame = await self.read_data_frame(max_size=self.max_size)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1113, in read_data_frame
+    frame = await self.read_frame(max_size)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1170, in read_frame
+    frame = await Frame.read(
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/framing.py", line 69, in read
+    data = await reader(2)
+  File "/Users/sebastian/.pyenv/versions/3.8.13/lib/python3.8/asyncio/streams.py", line 723, in readexactly
+    await self._wait_for_data('readexactly')
+  File "/Users/sebastian/.pyenv/versions/3.8.13/lib/python3.8/asyncio/streams.py", line 517, in _wait_for_data
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 115, in _handler
+    async for message in connection.read():
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection.py", line 333, in read
+    async for data in self.conn:
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 497, in __aiter__
+    yield await self.recv()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 568, in recv
+    await self.ensure_open()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 953, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedError: sent 1000 (OK); no close frame received
+2022-11-20 19:10:56,109 : WARNING : BINANCE.ws.3: encountered connection issue sent 1000 (OK); no close frame received - reconnecting in 1.0 seconds...
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 968, in transfer_data
+    message = await self.read_message()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1038, in read_message
+    frame = await self.read_data_frame(max_size=self.max_size)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1113, in read_data_frame
+    frame = await self.read_frame(max_size)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 1170, in read_frame
+    frame = await Frame.read(
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/framing.py", line 99, in read
+    data = await reader(length)
+  File "/Users/sebastian/.pyenv/versions/3.8.13/lib/python3.8/asyncio/streams.py", line 723, in readexactly
+    await self._wait_for_data('readexactly')
+  File "/Users/sebastian/.pyenv/versions/3.8.13/lib/python3.8/asyncio/streams.py", line 517, in _wait_for_data
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 69, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection_handler.py", line 115, in _handler
+    async for message in connection.read():
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/cryptofeed/connection.py", line 333, in read
+    async for data in self.conn:
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 497, in __aiter__
+    yield await self.recv()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 568, in recv
+    await self.ensure_open()
+  File "/Users/sebastian/.local/share/virtualenvs/GoldenEye-LmpyuZWp/lib/python3.8/site-packages/websockets/legacy/protocol.py", line 953, in ensure_open
+    raise self.connection_closed_exc()
+websockets.exceptions.ConnectionClosedError: sent 1000 (OK); no close frame received
