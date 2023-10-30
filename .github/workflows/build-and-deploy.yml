@@ -1,0 +1,15 @@
+name: Test & Build & Possibly Deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check-var:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if the variable is set
+        run: echo "GH variable value is ${{ github.event.pull_request.state }}"

@@ -2,43 +2,43 @@ import pandas as pd
 import numpy as np
 import pandas as pd
 from collections import OrderedDict as od
-from arctic import Arctic
-from arctic.date import DateRange
+# from arctic import Arctic
+# from arctic.date import DateRange
 import matplotlib.pyplot as plt
 
 
-def read_book(feed, symbol, start, end):
-    store = Arctic("mongodb+srv://admin:6EXvy4T8n9UnaEMtsUAVfI@gg-cluster.ldnwj.mongodb.net")
-    library = store[feed]
-    it = library.iterator("l2_book-" + symbol, chunk_range=DateRange(start, end))
-    book = {"bid": od(), "ask": od()}
-    data = []
-    for chunk in it:
-        chunk["delta"] = chunk.delta.map({"False": False, "True": True})
-        for row in chunk.iterrows():
-            timestamp = row[0]
-            receipt_timestamp, delta, side, price, size = row[1].values
-            delta = bool(delta)
-            if size == 0:
-                book[side].pop(price, None)
-            else:
-                book[side][price] = size
+# def read_book(feed, symbol, start, end):
+#     store = Arctic("mongodb+srv://admin:6EXvy4T8n9UnaEMtsUAVfI@gg-cluster.ldnwj.mongodb.net")
+#     library = store[feed]
+#     it = library.iterator("l2_book-" + symbol, chunk_range=DateRange(start, end))
+#     book = {"bid": od(), "ask": od()}
+#     data = []
+#     for chunk in it:
+#         chunk["delta"] = chunk.delta.map({"False": False, "True": True})
+#         for row in chunk.iterrows():
+#             timestamp = row[0]
+#             receipt_timestamp, delta, side, price, size = row[1].values
+#             delta = bool(delta)
+#             if size == 0:
+#                 book[side].pop(price, None)
+#             else:
+#                 book[side][price] = size
+#
+#             if delta and len(book["ask"]) == 20 and len(book["bid"]) == 20:
+#                 data.append({"ask": book["ask"].copy(), "bid": book["bid"].copy(), "timestamp": timestamp})
+#
+#     return data
 
-            if delta and len(book["ask"]) == 20 and len(book["bid"]) == 20:
-                data.append({"ask": book["ask"].copy(), "bid": book["bid"].copy(), "timestamp": timestamp})
 
-    return data
-
-
-def read_trades(feed, symbol, start, end):
-    store = Arctic("mongodb://127.0.0.1:27017")
-    library = store[feed]
-    it = library.iterator("trades-" + symbol, chunk_range=DateRange(start, end))
-    df = pd.DataFrame()
-    for chunk in it:
-        chunk.drop(["order_type", "id"], axis=1, inplace=True)
-        df = pd.concat([df, chunk])
-    return df
+# def read_trades(feed, symbol, start, end):
+#     store = Arctic("mongodb://127.0.0.1:27017")
+#     library = store[feed]
+#     it = library.iterator("trades-" + symbol, chunk_range=DateRange(start, end))
+#     df = pd.DataFrame()
+#     for chunk in it:
+#         chunk.drop(["order_type", "id"], axis=1, inplace=True)
+#         df = pd.concat([df, chunk])
+#     return df
 
 
 def generate_volumebars(df, frequency=10):
