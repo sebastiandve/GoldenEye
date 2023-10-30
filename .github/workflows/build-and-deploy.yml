@@ -1,19 +1,23 @@
-name: Test & Build & Possibly Deploy
+name: Close branches in dagster cloud
 
 on:
   pull_request:
     types:
       - closed
+env:
+  DAGSTER_CLOUD_URL: "http://everstores.dagster.cloud"
+  DAGSTER_CLOUD_API_TOKEN: 122
 
 jobs:
-  if_merged:
-    if: github.event.pull_request.merged == true
+  close-dagster-branch:
+#    if: contains(github.event.pull_request.labels.*.name, 'dev:dagster')
     runs-on: ubuntu-latest
     steps:
-    - run: echo "The PR was merged"
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
 
-  check-var:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check if the variable is set
-        run: echo "GH variable value is ${{ github.event.pull_request.state }}"
+      - name: Pre-run checks
+        id: pre-run
+        uses: dagster-io/dagster-cloud-action/actions/utils/prerun@v0.1
