@@ -1,4 +1,5 @@
 import pandas as pd
+from decimal import Decimal
 from sortedcontainers import SortedDict as od
 
 
@@ -18,6 +19,7 @@ def wide_book_csv(df):
     df = pd.DataFrame(odict_list)
     df["date"] = pd.to_datetime(df["timestamp"], unit="s")
     df.set_index(df["date"], inplace=True)
+    df.drop(["timestamp"], axis=1, inplace=True)
     df = df.apply(pd.to_numeric)
     return df
 
@@ -71,7 +73,7 @@ def wide_book(data):
     return df
 
 
-def get_wb_cols(levels=20):
+def get_wb_cols(levels=10):
     """Function to get the column names we need from our wide Book"""
     lc = ["[" + str(i) + "]" for i in range(0, levels)]
     askCols = ["asks" + l for l in lc]
@@ -84,7 +86,7 @@ def get_wb_cols(levels=20):
     return bidSizeCols, bidPriceCols, askSizeCols, askPriceCols
 
 
-def cum_bid_ask_imbalance(df, levels=20):
+def cum_bid_ask_imbalance(df, levels=10):
     """Calculate Cumulative Bid Ask Imbalance of the book"""
     bidSizeCols, _, askSizeCols, _ = get_wb_cols(levels)
     bidVolume = df[bidSizeCols].sum(axis=1)
@@ -92,7 +94,7 @@ def cum_bid_ask_imbalance(df, levels=20):
     return (bidVolume - askVolume) / (bidVolume + askVolume)
 
 
-def get_features(df, levels=20):
+def get_features(df, levels=10):
     features = df
     for i in range(1, levels + 1):
         features["bai" + str(i - 1)] = cum_bid_ask_imbalance(df, i)

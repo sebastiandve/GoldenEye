@@ -1,6 +1,16 @@
 from cryptofeed.callback import TradeCallback, BookCallback
 from cryptofeed import FeedHandler
-from cryptofeed.exchanges import Binance, Huobi, Upbit, FTX, Bybit, Kraken, KuCoin, Bitmex, Bitfinex, BinanceFutures
+from cryptofeed.exchanges import (
+    Binance,
+    Huobi,
+    Upbit,
+    Bybit,
+    KuCoin,
+    Bitmex,
+    Bitfinex,
+    BinanceFutures,
+    KrakenFutures,
+)
 from cryptofeed.defines import TRADES, L2_BOOK
 from save_data import book_to_csv
 import asyncio
@@ -11,7 +21,7 @@ symbol = "BTC-USDT-PERP"
 bitmex_symbol = "BTC-USDT-PERP"
 kwargs = {
     "max_depth": 10,
-    # 'snapshot_interval': 1,
+    'snapshot_interval': 1000,
     "channels": [L2_BOOK],
     "callbacks": {L2_BOOK: BookCallback(book_to_csv)},
 }
@@ -32,17 +42,10 @@ def stop():
 
 def main():
     loop = asyncio.get_event_loop()
-    f.add_feed(Binance(symbols=["BTC-USDT"], **kwargs))
-    # f.add_feed(Huobi(**kwargs))
-    # f.add_feed(OKEx(**kwargs))
-    # # AVOID f.add_feed(Upbit(symbols=[symbol], channels=[L2_BOOK], callbacks={L2_BOOK: BookCallback(book)}))
-    # f.add_feed(FTX(**kwargs))
-    # # AVOID f.add_feed(Bybit(symbols=[symbol], channels=[L2_BOOK], callbacks={L2_BOOK: BookRedis()}))
-    # f.add_feed(Kraken(symbols=[symbol], channels=[L2_BOOK], callbacks={L2_BOOK: BookCallback(book)}))
-    # f.add_feed(KuCoin(**kwargs))
-    f.add_feed(Bitmex(symbols=[bitmex_symbol], **kwargs))
-    # f.add_feed(Bitfinex(**kwargs))
-    f.add_feed(BinanceFutures(symbols=["BTC-USDT-PERP"], **kwargs))
+    f.add_feed(KrakenFutures(symbols=["BTC-USD-PERP"], **kwargs))
+    f.add_feed(Bitmex(symbols=[symbol], **kwargs))
+    f.add_feed(Bitfinex(symbols=[symbol], **kwargs))
+    f.add_feed(BinanceFutures(symbols=[symbol], **kwargs))
 
     f.run(start_loop=False)
     # loop.call_later(30, stop)
